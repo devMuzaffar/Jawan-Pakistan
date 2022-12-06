@@ -1,10 +1,10 @@
 git is distributed version control system (DVCS). used for controlling versions, multiple developers can work in a git, has public/private options.
 
-> To install git, goto "git-scm.com"
+1) To install git, goto "git-scm.com"
 
-> Select folder, and right click to git bash to open git
+2) Select folder, and right click to git bash to open git
 
-COMMANDS:
+3) COMMANDS:
 
 git init		 			<- initializes git in current folder
 
@@ -18,6 +18,16 @@ git config --global user.name "YOUR NAME"	<- Configures User [Requires before gi
 git config --global user.email "YOUR EMAIL"
 
 git commit -m "YOUR MESSAGE"			<- Stores files
+
+
+4) Goto Github and sign in, Create new repository
+
+- Repository is project folder
+- Repository is created to connect Local Repository('.git' folder in root) with Remote repository
+
+5) To Connect Local Repo to Remote Repo:
+
+git remote add GIT_URL
 
 
 
