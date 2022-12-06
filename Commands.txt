@@ -1,0 +1,23 @@
+git is distributed version control system (DVCS). used for controlling versions, multiple developers can work in a git, has public/private options.
+
+> To install git, goto "git-scm.com"
+
+> Select folder, and right click to git bash to open git
+
+COMMANDS:
+
+git init		 			<- initializes git in current folder
+
+git status					<- checks commits
+						   Any changes you make in folder will show status
+
+git add -A					<- starts tracking on all files
+
+
+git config --global user.name "YOUR NAME"	<- Configures User [Requires before git commit]
+git config --global user.email "YOUR EMAIL"
+
+git commit -m "YOUR MESSAGE"			<- Stores files
+
+
+
