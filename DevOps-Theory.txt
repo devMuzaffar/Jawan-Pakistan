@@ -1,0 +1,24 @@
+DevOps Methodology
+
+> in Old times Developers and testers work seperatey, and Operations team/ IT Team that do execution, server deployment, tracking, ensuring application is working properly.
+
+> Developers + Operations(IT) combo.
+
+> Now Developer also doing Operations work
+
+> Developer creates Project, Operation team helps in execution, server based deployment, tracking.
+
+> For ex: Developer's App is ready, but Ops team is busy not to deploy. so DevOps do both work.
+
+> Amazon major work in cloud, DevOps
+
+> Ops challenges: concerned about infrastructure, has to reinvent everytime dev make changes in codes.
+
+
+
+>> Linux is important to learn DevOps, but can also work on windows.
+
+
+
+
+

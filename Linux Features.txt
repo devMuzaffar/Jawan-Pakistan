@@ -1,0 +1,15 @@
+Linux is used by many companies due to Open-source OS.
+
+Features that Linux supports while others don't:
+
+1. Supports Clustering: combining several systems into one. Services can be configured like clusters to provide seamless UX
+2. Runs Virtualization: one PC to appear several PC to users. Can run other OS-es like windows, Mac etc.
+3. Cloud Computing: Supports Large complex Virtualization like Virtual networking, Storage, guests. like AWS
+4. Options for storage: Data dont need always on HDD, Linux offers local and networked storage options.
+
+
+
+
+Windows is now also Open-source OS
+
+

@@ -6,18 +6,18 @@ git is distributed version control system (DVCS). used for controlling versions,
 
 3) COMMANDS:
 
-git init		 			<- initializes git in current folder
+	git init		 			<- initializes git in current folder
 
-git status					<- checks commits
+	git status					<- checks commits
 						   Any changes you make in folder will show status
 
-git add -A					<- starts tracking on all files
+	git add -A					<- starts tracking on all files
 
 
-git config --global user.name "YOUR NAME"	<- Configures User [Requires before git commit]
-git config --global user.email "YOUR EMAIL"
+	git config --global user.name "YOUR NAME"	<- Configures User [Requires before git commit]
+	git config --global user.email "YOUR EMAIL"
 
-git commit -m "YOUR MESSAGE"			<- Stores files
+	git commit -m "YOUR MESSAGE"			<- Stores files with Message like any changes you done
 
 
 4) Goto Github and sign in, Create new repository
@@ -27,13 +27,16 @@ git commit -m "YOUR MESSAGE"			<- Stores files
 
 5) COMMANDS:
 
-git remote add origin GIT_URL			<- Link Local Repo with Remote Repo
+	git remote add origin GIT_URL			<- Link Local Repo with Remote Repo
 
-git push -u origin master			<- Add files (Requires internet connection)
+	git push -u origin master			<- Add files to remote (Requires internet connection)
+							   -u (tracks connection btw Local Remote)
+							   origin (internet) , master (branch name)
+
 
 6) [OPTIONAL] to Download Code -> goto any repository, Click Clone, copy .git link, and then:
 
-git clone GIT_URL				<- Downloads the repository in folder
+	git clone GIT_URL				<- Downloads the repository in folder
 
 
 * GLOSSARY:
