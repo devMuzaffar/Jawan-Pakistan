@@ -1,0 +1,18 @@
+List Functions:
+
+List.replaceRange(start, <end, [List]);
+
+// This function replaces values from start to end.
+// if for ex [15] then replaces start index with 15 value, else if [15,20], then will replace with start index
+
+
+example:
+
+List X = [1,2,3,4];
+
+X.replaceRange(0,1, [11]);
+
+before: 1,2,3,4
+after : 11,2,3,4
+
+
