@@ -16,3 +16,8 @@ before: 1,2,3,4
 after : 11,2,3,4
 
 
+Boolean Functions:
+
+List.isEmpty
+List.isNotEmpty
+
