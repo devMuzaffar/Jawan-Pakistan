@@ -1,10 +1,11 @@
+** List **
+
 List Functions:
 
 List.replaceRange(start, <end, [List]);
 
 // This function replaces values from start to end.
 // if for ex [15] then replaces start index with 15 value, else if [15,20], then will replace with start index
-
 
 example:
 
@@ -20,4 +21,76 @@ Boolean Functions:
 
 List.isEmpty
 List.isNotEmpty
+
+
+Addition & clear methods:
+
+// Single
+List.add(X);
+
+// Multiple
+List.addAll([X,Y,Z]);
+
+// Single with specific index
+List.insert(Index, Value);
+
+// Multiple with specific index
+List.insertAll(Index, [X,Y,Z]);
+
+// Clear
+List.clear();
+
+Remove methods:
+
+// Remove specific value
+List.remove(value);
+
+// Remove at speciic index
+List.removeAt();
+
+// Remove Last element
+List.removeLast();
+
+// Remove by condition
+List.removeWhere((e) => e < 0);
+
+// Remove by condition Opposite
+// Show elements only by condition, delete rest of them
+List.retainWhere((e) => e>5);
+
+// Remove by range
+List.removeRange(start, end);
+
+Reverse method:
+// works with both int, String and mix
+print(List.reversed);
+
+
+** Map **
+
+// Same as Dictionary in python
+// key: value
+
+ex: var map1 = {1:"Umair", 2: 22};
+
+// Shows all keys
+map.keys
+
+// shows all values
+map.values
+
+// To add Single key:value
+// if key is same, then will overrides value
+map[key] = Value;
+
+// To Add multiple Key:value
+// Also sorts if add by value
+map.addAll({1:X, 2:Y});
+
+// Checks if key is already exist, dont't add
+// Else if Key is not Exist, then add
+map.putIfAbsent(key, ()=> Value);
+
+// Remove by condition
+map.removeWhere((key,value) => value.startswith(X));
 
