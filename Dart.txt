@@ -94,3 +94,13 @@ map.putIfAbsent(key, ()=> Value);
 // Remove by condition
 map.removeWhere((key,value) => value.startswith(X));
 
+// Merging multiple Maps in one
+// Merge methods
+
+... is seperate operator, works like union, used to add 2 or more things
+
+// method 1
+var mapMerged = {}..addAll(map1)..addAll(map2);
+
+// method 2
+var MapMerged = {...map1,...map2};
