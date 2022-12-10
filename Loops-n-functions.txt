@@ -1,0 +1,13 @@
+Ways to add loop
+
+// for in loop
+for(var i in list){
+  print(i);
+}
+
+// ForEach loop
+list.forEach((i){
+  print(i);
+});
+
+
