@@ -104,3 +104,18 @@ var mapMerged = {}..addAll(map1)..addAll(map2);
 
 // method 2
 var MapMerged = {...map1,...map2};
+
+
+// Merge 2 list to form one new map
+// both list must have same length!
+var map1 = Map.fromIterables(list1,list2);
+
+// ContainsValue & ContainsKey boolean
+map.containsKey(5);
+map.containsValue("Javed");
+
+// Printing Map/List in Loop
+map.forEach((key, value){
+  print("$key , $value");
+});
+
