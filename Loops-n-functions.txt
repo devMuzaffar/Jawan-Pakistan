@@ -11,3 +11,31 @@ list.forEach((i){
 });
 
 
+// function parameters - function with input values
+// function arguements - inside input values of function is called arguements
+
+// dynamic & var
+
+// dynamic is used for functions
+// var is used for variables
+
+// both purpose is same.. auto find data type/ variable
+
+
+// Multiple inheritances
+class A extends B with C,D{}
+
+// abstract classes (same as interface)
+// abstract class dont take data-types exceot var
+abstract class X{
+
+void doit();
+
+}
+
+class Y implements X{
+
+@override
+doit() => xxxx;
+}
+
