@@ -1,0 +1,4 @@
+> Flutter default widget name is "MyApp"
+
+> if you change widget name to something, then widget_test.dart gives you error.
+
