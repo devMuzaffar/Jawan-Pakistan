@@ -1,4 +1,10 @@
-> Flutter default widget name is "MyApp"
+> Flutter default widget name in main.dart is "MyApp"
 
-> if you change widget name to something, then widget_test.dart gives you error.
+> if you change widget name to something, then widget_test.dart gives you error
+> you can rename MyApp to any in widget test
+
+
+> MaterialApp() is pre-defined class that gives you widget access
+
+
 
