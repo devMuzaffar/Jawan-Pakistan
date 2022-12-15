@@ -5,6 +5,27 @@
 
 
 > MaterialApp() is pre-defined class that gives you widget access
+> Its like a package. if don't use, then certain widgets will not work
+> Scaffold() is like page your App. has Appbar and body
 
 
+>Alignments:
+
+Row:
+Main Axis : Left to right
+Cross Axis: top to bottom
+
+Column:
+Main axis: top to bottom
+cross axis: left to right
+
+Alignments:
+
+MainAxisAlignment.spaceBetween: High space
+MainAxisAlignment.spaceEvenly: Mid space
+MainAxisAlignment.spaceAround: Low space
+
+
+in Widget's properties always starts with lower case first letter  i.e mainAxisAlignment: 
+in properties's values always starts with capital first letter i.e MainAxisAlignment.center;
 
