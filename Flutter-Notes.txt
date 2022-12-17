@@ -25,7 +25,25 @@ MainAxisAlignment.spaceBetween: High space
 MainAxisAlignment.spaceEvenly: Mid space
 MainAxisAlignment.spaceAround: Low space
 
-
+in Widget. name starts with Capital first letter
 in Widget's properties always starts with lower case first letter  i.e mainAxisAlignment: 
 in properties's values always starts with capital first letter i.e MainAxisAlignment.center;
+
+Widgets:
+
+// For Spacing
+SizedBox(height: , width: );
+
+// makes list scrollable
+SingleChildScrollView(child: );
+
+?? ListView vs SingleChildScrollView?   > Listview for multiple, SCSV for single widget!
+
+// Text Input
+// Wrap with Container for width height adjustment
+TextField();
+
+// Button
+// onPressed is required
+ElevatedButton(onPressed: null, child: Text(""));
 
