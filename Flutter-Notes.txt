@@ -9,7 +9,7 @@
 > Scaffold() is like page your App. has Appbar and body
 
 
->Alignments:
+> Alignments:
 
 Row:
 Main Axis : Left to right
@@ -46,4 +46,10 @@ TextField();
 // Button
 // onPressed is required
 ElevatedButton(onPressed: null, child: Text(""));
+
+
+> Stateless vs Stateful class?
+> Stateless - no changing on screen. runtime static
+> stateful - changes screen on runtime
+
 
