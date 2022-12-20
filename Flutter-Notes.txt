@@ -67,6 +67,16 @@ ElevatedButton(onPressed: null, child: Text(""));
 > NOTE: when used with Column(), only works with topLeft/right/centre. Not BottomLRC!
 
 
+// Color by Hex
+color: Color(0xFF000000),
+- 0xFF is the #
+- 000000 is the 6 digit of color
+
+// CircleAvatar() - Widget
+- Radius: 100 is the size of circle
+- backgroundColor: is the Color of Circle
+- backgroundImage: is the Image, use NetworkImage('URL') for internet or AssetImage('Path').
+
 
 
 
