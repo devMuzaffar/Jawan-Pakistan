@@ -53,3 +53,22 @@ ElevatedButton(onPressed: null, child: Text(""));
 > stateful - changes screen on runtime
 
 
+// Container() - Notes
+> Center() widget centers widget with both width and height wise
+> padding: EdgeInsets.all() works only with child. Inside
+> margin: EdgeInsets.all() works only with Container(). Outside.
+
+> EdgeInsets is class that tells Edges of widget.
+
+// Align() - Widget
+> alignment: Alignment.bottomLeft
+> Widget that changes alignment of our desired
+> Similar to Center but has custom placement
+> NOTE: when used with Column(), only works with topLeft/right/centre. Not BottomLRC!
+
+
+
+
+
+
+
