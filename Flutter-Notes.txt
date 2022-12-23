@@ -75,7 +75,21 @@ color: Color(0xFF000000),
 // CircleAvatar() - Widget
 - Radius: 100 is the size of circle
 - backgroundColor: is the Color of Circle
-- backgroundImage: is the Image, use NetworkImage('URL') for internet or AssetImage('Path').
+- backgroundImage: is the Image
+> use NetworkImage('URL') for internet
+> use AssetImage('Path') from assets
+
+
+// Stack() - Widget
+- Used for placing Over-the-top widgets
+- Positioned() - only used inside stack() widget
+
+// Positioned() - Widget
+- Used inside Stack() widget
+- parameters are top,left,right with numbers
+- Similar to padding()
+
+1:07:22
 
 
 
