@@ -103,6 +103,20 @@ MediaQuery.of(context).size.height*0.2;
 > Means 20% of your device size
 
 
+// Go to another Widget
+Navigator.push(context, MaterialPageRoute(builder: (context) => WIDGET()));
+
+// Exit from widget
+Navigator.push(context);
+
+// ListTile() - Widget
+- leading: Start
+- trailing: End
+- title: Text
+- subtitle: Text [bottom text]
+
+> ListTile gives you Tile like ChatApp
+
 
 
 
