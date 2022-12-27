@@ -34,7 +34,7 @@ Widgets:
 // For Spacing
 SizedBox(height: , width: );
 
-// makes list scrollable
+// make Any Widget Scrollable
 SingleChildScrollView(child: );
 
 ?? ListView vs SingleChildScrollView?   > Listview for multiple, SCSV for single widget!
@@ -60,12 +60,19 @@ ElevatedButton(onPressed: null, child: Text(""));
 
 > EdgeInsets is class that tells Edges of widget.
 
+
+// Gradient Color in Container()
+- Container(decoration: 
+BoxDecoration(
+gradient: LinearGradient(colors: [Color.red, Color.green])
+))
+
+
 // Align() - Widget
 > alignment: Alignment.bottomLeft
 > Widget that changes alignment of our desired
 > Similar to Center but has custom placement
 > NOTE: when used with Column(), only works with topLeft/right/centre. Not BottomLRC!
-
 
 // Color by Hex
 color: Color(0xFF000000),
@@ -79,7 +86,6 @@ color: Color(0xFF000000),
 > use NetworkImage('URL') for internet
 > use AssetImage('Path') from assets
 
-
 // Stack() - Widget
 - Used for placing Over-the-top widgets
 - Positioned() - only used inside stack() widget
@@ -89,7 +95,13 @@ color: Color(0xFF000000),
 - parameters are top,left,right with numbers
 - Similar to padding()
 
-1:07:22
+// Responsive Size?
+MediaQuery.of(context).size.height/width;
+- % percentage of size acc. to device
+
+MediaQuery.of(context).size.height*0.2;
+> Means 20% of your device size
+
 
 
 
