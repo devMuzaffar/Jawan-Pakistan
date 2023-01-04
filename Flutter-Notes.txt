@@ -118,6 +118,29 @@ Navigator.push(context);
 > ListTile gives you Tile like ChatApp
 
 
+// ListView.Builder() - widget
+- itemCount: 1111
+- itemBuilder: (context, index){
+  return WIDGET();
+  }
+
+> Context - Jo bhi data aarha hota ha uska context dekhta ha
+> BuildContext Context - knows the location of widget in a widget tree
+
+
+GridView() - Can have more than one widget in single line, compared to single widget in single line in ListVew()
+
+
+// GridView.count() - Widget
+- crossAxisCount - [How Many Widgets in single line can have?]
+- crossAxisSpacing - [Space Between each widgets in single line]
+- mainAxisSpacing - [Space Between Up and Down of widgets]
+- children: List.generate(length, (index){ 
+  return WIDGET();
+  })
+
+46:18
+
 
 
 
