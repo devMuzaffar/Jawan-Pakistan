@@ -138,8 +138,26 @@ GridView() - Can have more than one widget in single line, compared to single wi
 - children: List.generate(length, (index){ 
   return WIDGET();
   })
+> Height width of widgets automatically adjusted w.r.t to Grid Count
 
-46:18
+
+// List.generate()
+- Useful for placing multiple widgets like for loop
+- Arguments: length, (index) { return WIDGET(); })
+
+
+// Drawer() - widget
+- Used inside Scaffold(drawer: Drawer())
+- child: ListView(children: [])
+- DrawerHeader(child: ) - used inside ListView first
+
+
+// For Tab view Navigation
+
+// DefaultTabController() - widget
+- length: [HOW MANY TABS?]
+- child: Scaffold()
+
 
 
 
