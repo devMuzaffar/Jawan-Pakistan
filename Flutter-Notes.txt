@@ -153,10 +153,71 @@ GridView() - Can have more than one widget in single line, compared to single wi
 
 
 // For Tab view Navigation
+// first Wrap Scaffold() with DefaultTabController(), then use TabBar() widget in Appbar title
 
 // DefaultTabController() - widget
 - length: [HOW MANY TABS?]
 - child: Scaffold()
+
+// TabBar() - widget
+- Used inside AppBar( bottom: )    [can also use in title: ]
+- tabs: []
+
+// Tab() - Widget
+- Used inside tabs: []
+- child: Text()
+- icon: 
+
+> Top is initialized, to view Widgets body we need TabBarView inside Scaffold body:
+
+// TabBarView() - Widget
+- Used inside body: 
+- Widgets should be == TabBar Length
+- children: []
+- indicatorColor : Line Color
+- labelColor: Selected Text Color
+- unselectedLabelColor: UnSelected Text Color
+
+
+> Default State Management in flutter is setState((){});
+
+
+// Creating Bottom Navigation bar
+
+// Initialize variables and widgets
+- int CurrentTab = 0;
+- Widget CurrentScreen = WIDGET();
+
+// PageStorage() widget
+- used inside body: 
+- bucket: PageStorageBucket()
+- child: DefaultWidget()
+> Aik class ha jis ma sari classain jo bhi call horhi hoti hen bottomNavigationBar ma wo sari classain aarhi hoti hen
+
+// BottomAppBar() Widget
+- used inside bottomNavigationBar: 
+- color:
+- child: Container(child: Row())
+
+> In Row(), we use MaterialButtons
+
+// MaterialButton() widget
+- minWidth: 50/60
+- onPressed: 
+> onPressed: (){
+  SetState((){
+  CurrentScreen = WIDGET_1();
+  currentTab = 1;
+  })
+}
+> Vice-Versa
+
+// To Highlight and De-Highlight MaterialButton icon
+- child: Icon(Icon.Search, color: currentTab == [CURRENT_TAB] ? Colors.white : Colors.black ) 
+
+
+
+
 
 
 
