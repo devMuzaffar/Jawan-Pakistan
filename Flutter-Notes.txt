@@ -216,6 +216,49 @@ GridView() - Can have more than one widget in single line, compared to single wi
 - child: Icon(Icon.Search, color: currentTab == [CURRENT_TAB] ? Colors.white : Colors.black ) 
 
 
+// API Integration
+
+// Json used: jsonplaceholder.typicode.com/users
+
+// To Grab any Data from Json by name,username,email etc. We Create Model Class!
+- Model Class with:
+> Variables [username, password, email?]
+> Constructor [this.username, this.password?]
+
+// Packages we download from pub.dev
+// Most Common Packages for API : HTTP package
+// Follow instructions on pub dev instalaltion
+
+// Import Http package, also Alias him. by import 'dadasdas' as HTTP;
+
+
+// Method
+// Async - used to wait until we get data from internet
+// async in method stops method from running until we get data from internet. Used mostly if you have slow or no internet and App needs instant display of data.
+// await - is applied to whom syntax should have to wait until yes or no reply.
+// if don't use async - await, then function will run before data grab and will give error!
+
+// Link we're getting from Http.get() is in JSON format. to Decode Json we used
+// jsonDecode(responce.body) - as variable
+
+void getUser async{
+  var responce = await HTTP.get(Uri.https('', ''));
+  
+  var JSONDecode = jsonDecode(responce.body);
+  
+  
+  
+
+}
+
+// Uri.https() for https
+// Uri.http() for http
+
+// Uri.https(authority, unencoded)
+- Authority is the 'hjadshkda.com' link
+- unencoded is the post .com slash '/user/police/' links
+
+
 
 
 
