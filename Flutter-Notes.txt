@@ -225,12 +225,14 @@ GridView() - Can have more than one widget in single line, compared to single wi
 > Variables [username, password, email?]
 > Constructor [this.username, this.password?]
 
+Ex: class userModel{}
+
 // Packages we download from pub.dev
 // Most Common Packages for API : HTTP package
 // Follow instructions on pub dev instalaltion
 
 // Import Http package, also Alias him. by import 'dadasdas' as HTTP;
-
+// Also import 'dart:convert', it contains jsonDecode() method!
 
 // Method
 // Async - used to wait until we get data from internet
@@ -240,14 +242,26 @@ GridView() - Can have more than one widget in single line, compared to single wi
 
 // Link we're getting from Http.get() is in JSON format. to Decode Json we used
 // jsonDecode(responce.body) - as variable
+// Data in jsonDecode is form in as List inside dictionaries List[Dict{}]
+
+> WE want data to be in List[dictionaries], we created Empty list variable,
+> then for loop. User Model class is used to add Dictionary-style data in List
+> ending function with return List;
 
 void getUser async{
   var responce = await HTTP.get(Uri.https('', ''));
   
   var JSONDecode = jsonDecode(responce.body);
   
+  var users = [];
   
+  for(var i in JSONDecode){
+    userModel Userz = userModel(i["users"],i["username"],i["email"]);
+    users.add(Userz);
+    
+  }
   
+  return users;
 
 }
 
@@ -255,15 +269,23 @@ void getUser async{
 // Uri.http() for http
 
 // Uri.https(authority, unencoded)
-- Authority is the 'hjadshkda.com' link
+- Authority is the 'XXXXXX.com' link
 - unencoded is the post .com slash '/user/police/' links
 
 
+// DISPLAY Data
 
-33:15
+// FutureBuilder() - widget
+- used inside body:
+- future: FUTURE_FUNCTION()
+- builder: (context, snapshot){
+  if(snapshot.data == null) { return WIDGET(); }
+ 
+  else{ return WIDGET();}
+
+}
 
 
 
-
-
+45:00
 
