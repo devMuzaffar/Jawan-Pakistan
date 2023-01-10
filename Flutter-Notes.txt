@@ -281,11 +281,28 @@ void getUser async{
 - builder: (context, snapshot){
   if(snapshot.data == null) { return WIDGET(); }
  
-  else{ return WIDGET();}
-
+  else{
+    ListView.Builder(
+    itemCount: snapshot.data!.length
+    itemBuilder: (context, index){
+    
+    return ListTile(
+    
+    title: SnapShot.data[index].name;
+    
+    );
+    
+    }
+    );
+  
+  }
 }
 
+> (context, AsyncSnapShot snapshot) - is used to prevent, snapshot.data.length undefined error!
+> To Display data by variable-name of class model: use snapshot.data[index].VARIABLE_NAME_IN_MODEL_CLASS;
 
 
-45:00
+51:00
+
+
 
