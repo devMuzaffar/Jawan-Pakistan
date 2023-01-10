@@ -256,7 +256,7 @@ void getUser async{
   var users = [];
   
   for(var i in JSONDecode){
-    userModel Userz = userModel(i["users"],i["username"],i["email"]);
+    userModel Userz = userModel(i["users"],i["username"],i["email"], i["company"]["name"]);
     users.add(Userz);
     
   }
@@ -264,6 +264,8 @@ void getUser async{
   return users;
 
 }
+
+> i["company"]["name"] - is used list within list
 
 // Uri.https() for https
 // Uri.http() for http
@@ -301,8 +303,10 @@ void getUser async{
 > (context, AsyncSnapShot snapshot) - is used to prevent, snapshot.data.length undefined error!
 > To Display data by variable-name of class model: use snapshot.data[index].VARIABLE_NAME_IN_MODEL_CLASS;
 
+> FutureBuilder() - checks if data is coming or not. he peeks at.
 
-51:00
+
+
 
 
 
