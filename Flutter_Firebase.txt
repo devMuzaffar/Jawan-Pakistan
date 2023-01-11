@@ -35,12 +35,14 @@ But Creating these applications has its own cost and management. since you can't
 // Firebase Database - Service
 - Firebase Provides 2 types of Database: Realtime Database and FireStore [both are realtime!]
 - Firestore is common and is new!
+- It is also No-SQL database.
 - Location must be closed to Client's location
 - Test Mode is Public access @ 30 days, Production mode is private. means any user cant access data.
 - Collection -> Folder
 - Collection ID -> Name should be something you're needed for ex: in ChatAPP Post, Message, Users etc.
 - Document -> Folder within Folder with data.
-> Go to FireStore database > Create > Test Mode > Location > enable > Create Collection > Create Document
+- Fields -> Should be like Post>User_name>title,description,reactions
+> Go to FireStore database > Create > Test Mode > Location > enable > Create Collection > Create Document > Write Fields with values[optional]
 
 
-
+36:12
