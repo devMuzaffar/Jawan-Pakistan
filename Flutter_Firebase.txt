@@ -35,7 +35,8 @@ But Creating these applications has its own cost and management. since you can't
 // Firebase Database - Service
 - Firebase Provides 2 types of Database: Realtime Database and FireStore [both are realtime!]
 - Firestore is common and is new!
-- It is also No-SQL database.
+- It is also No-SQL database as well as Document-based database. like MongoDB.
++ In SQL, you store data in rows and columns, but in this you store data in Collection and documents. If you learn this, then MongoDB is easy for you.
 - Location must be closed to Client's location
 - Test Mode is Public access @ 30 days, Production mode is private. means any user cant access data.
 - Collection -> Folder
@@ -45,4 +46,18 @@ But Creating these applications has its own cost and management. since you can't
 > Go to FireStore database > Create > Test Mode > Location > enable > Create Collection > Create Document > Write Fields with values[optional]
 
 
-36:12
+// SafeArea() - widget
+- For Showing widget a little bit bottom from status bar or notch!
+- child: 
+
+// TextField() - widget
+> TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: "Enter Your Password"
+                  ),
+                ),
+
+
+46:00
+
