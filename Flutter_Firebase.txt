@@ -7,9 +7,40 @@ MVC -> Model View Controller
 
 // Firebase
 - A Realtime database
+- also called as Baas (Backend as a service)
 - Uses MVC Framework
 - Any changes done in Model, also changes the View by Controller. This concept ccalled 3-way data binding
 - History: It is made by 3 students in Australia as FYP with following MVC framework. Google bought in billions and is property of google now.
 
-// Why Learn Firebase, instead of Nodejs?
--
+// Why Learn Firebase?
+
+For ex: Flutter App you're using is called Client-side application, and working behind your App, that computer is called server. Server has mechanical that stores data called database. 
+Previously we have displayed data through RestAPI. A data stored somewhere in server. We can create our own server.
+To Create own server application. first we write client-side application in Flutter, and back-end application that communicates in flutter. 
+But Creating these applications has its own cost and management. since you can't create back-end app using flutter, so need to learn another language for back-end which is time consuming and not cost-effective. Client wants to build product faster. To Solve this problem, we use Firebase!
+
+> Summary: Firebase is shortcut for creating backend application in flutter, without learning another language for it!
+> Don't have to write any backend, just Use it!
+
+// Firebase vs MongoDB ?
+> MongoDB is just database, Can't connect MongoDB directly with flutter, because MongoDB runs on server, so you have to learn and create server first.
+- Since Server contains database. you need to communicate server first for data, then gives you database!
+> Firebase is complete Package! gives you database, storage, server and many more!
+
+// Authentication - Service
+- Provides the sign-in sign-up mechanism easily.
+> Go to firebase > Authentication > Sign-in method > Enable Email/Password
+> Go to Users > Add User > Add any Email with password
+
+// Firebase Database - Service
+- Firebase Provides 2 types of Database: Realtime Database and FireStore [both are realtime!]
+- Firestore is common and is new!
+- Location must be closed to Client's location
+- Test Mode is Public access @ 30 days, Production mode is private. means any user cant access data.
+- Collection -> Folder
+- Collection ID -> Name should be something you're needed for ex: in ChatAPP Post, Message, Users etc.
+- Document -> Folder within Folder with data.
+> Go to FireStore database > Create > Test Mode > Location > enable > Create Collection > Create Document
+
+
+
