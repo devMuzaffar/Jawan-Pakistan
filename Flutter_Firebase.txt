@@ -1,0 +1,15 @@
+Previously there was Realtime data implementation i.e MVC framework
+
+MVC -> Model View Controller
+    -> Model (i.e Database) , View (i.e Display/Screen) , Controller (i.e business logic that connects Model-View / also called Server)
+    
+> Socket.io plays vital role in realtime data implementation
+
+// Firebase
+- A Realtime database
+- Uses MVC Framework
+- Any changes done in Model, also changes the View by Controller. This concept ccalled 3-way data binding
+- History: It is made by 3 students in Australia as FYP with following MVC framework. Google bought in billions and is property of google now.
+
+// Why Learn Firebase, instead of Nodejs?
+-
