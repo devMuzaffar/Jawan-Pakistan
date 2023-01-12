@@ -45,19 +45,40 @@ But Creating these applications has its own cost and management. since you can't
 - Fields -> Should be like Post>User_name>title,description,reactions
 > Go to FireStore database > Create > Test Mode > Location > enable > Create Collection > Create Document > Write Fields with values[optional]
 
+// Sync vs Async?
+- Sync: Runs immediately - Halts Execution of other processes
+- Async: Does not Halts Execution of other processes
+
+Ex: In Uploading videos, if sync is used then other works will freeze until it uploads. with Async, other processes also works and doesnt halts!
+
 
 // SafeArea() - widget
 - For Showing widget a little bit bottom from status bar or notch!
 - child: 
 
+// User Authentication
+
 // TextField() - widget
-> TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: "Enter Your Password"
-                  ),
-                ),
+- decoration: InputDecoration()
+- + border: OutlineInputBorder(),
+- + hintText: "Enter Your Password",
+
+// RaisedButton()
+- onPressed: (){}
+- child: Text("Raised Button")
+
+// configuring Up Firebase for first time
+
+> Go to https://firebase.flutter.dev/docs/overview/
+> Follow instructions on how to install firebase in flutter
+
+> Go to firebase.com and set-up firebase for android in flutter, follow instructions!
+> Android Package Name -> android/app/build.gradle -> applicationID
+> google-services.json -> android/app/
+
+// Paste these Widgets
+- WidgetsFlutterBinding.ensureInitialized();                             -> Void main()
+- final Future<FirebaseApp> _initialization = Firebase.initializeApp();  -> Any Widget()
 
 
-46:00
-
+1:02:00
