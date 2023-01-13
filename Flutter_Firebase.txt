@@ -51,6 +51,16 @@ But Creating these applications has its own cost and management. since you can't
 
 Ex: In Uploading videos, if sync is used then other works will freeze until it uploads. with Async, other processes also works and doesnt halts!
 
+// MultiDex - Error Fixing
+> MultiDex is used if your build file exceeds 64K limit
+> Go to /android/app/build.gradle
+> defaultConfig -> multiDexEnabled true,
+
+// Tip 
+> If your account exceeds 10 apps project limit in firebase, then use another google account. Then Join secondary account with primary account by ownership!
+> Go to Firebase Overview panel > top right Gear Icon > Project settings > users and permissions > add Member > add Secondary Google account as Owner!
+> All projects in primary can also be used in secondary account!
+
 
 // SafeArea() - widget
 - For Showing widget a little bit bottom from status bar or notch!
@@ -80,5 +90,64 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 - WidgetsFlutterBinding.ensureInitialized();                             -> Void main()
 - final Future<FirebaseApp> _initialization = Firebase.initializeApp();  -> Any Widget()
 
+// Wrap MaterialApp() widget with FutureBuilder()
+// future is _initialization variable. we created below.
+- future: FIREBASE_INITIALIZATION,
+- builder: (context, snapshot){
 
-1:02:00
+    if(snapshot.hasError){
+        return WIDGET();
+    }
+    
+    if(snapshot.connectionState == connectionState.done){
+        return MaterialApp();
+    }
+    
+    [ OPTIONAL - for Waiting Widget! ]
+    return WIDGET();
+    
+}
+
+> Go to https://firebase.flutter.dev/docs/auth/usage/
+> Follow instructions how to initialize Authentication
+
+- To Grab all Data inputs from Textfield() to RaisedButton()
+
+> Initialize Variable:
+- final TextEditingController _UsernameController = TextEditingController();
+- final TextEditingController _EmailController = TextEditingController();
+- final TextEditingController _PasswordController = TextEditingController();
++ TEC is a class that manages the input data you're doing!
++ Controller lets you grab values from input to button!
+
+> add "controller: CONTROLLER_NAME " property in TextField()
+
+> Add Method() in onPressed:
+> Define these variables inside method:
+- final String userName = _UsernameController.text;
+- final String Email = _EmailController.text;
+- final String password = _PasswordController.text;
+
+ex:
+
+void Register(){
+final String userName = _UsernameController.text;
+final String Email = _EmailController.text;
+final String password = _PasswordController.text;
+
+
+}
+
+> Go to https://firebase.flutter.dev/docs/auth/usage/
+> Follow instructions, and start from Email/Password registration and sign in title!
+
+1:25:00
+
+
+// FireStore initialization
+
+> Go to > https://firebase.flutter.dev/docs/firestore/overview/
+> Follow instructions
+
+
+
