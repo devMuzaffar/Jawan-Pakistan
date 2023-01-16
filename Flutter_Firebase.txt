@@ -1,3 +1,5 @@
+## THEORY PART ##
+
 Previously there was Realtime data implementation i.e MVC framework
 
 MVC -> Model View Controller
@@ -62,11 +64,14 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 > All projects in primary can also be used in secondary account!
 
 
+## END OF THEORY PART ##
+
+
 // SafeArea() - widget
 - For Showing widget a little bit bottom from status bar or notch!
 - child: 
 
-// User Authentication
+// User Authentication using Firebase
 
 // TextField() - widget
 - decoration: InputDecoration()
@@ -108,40 +113,64 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
     
 }
 
+// firebase Authentication & Registration initialiation!
+
+// Links
+- https://firebase.flutter.dev/docs/auth/usage/
+
+// Add Firebase Auth in your Project!
+- flutter pub add firebase_auth
+- flutter pub get
+
+// import Library
+- import 'package:firebase_auth/firebase_auth.dart';
+
 > Go to https://firebase.flutter.dev/docs/auth/usage/
 > Follow instructions how to initialize Authentication
 
 - To Grab all Data inputs from Textfield() to RaisedButton()
 
-> Initialize Variable:
+> Initialize Variables:
+- FirebaseAuth auth = FirebaseAuth.instance;
+
 - final TextEditingController _UsernameController = TextEditingController();
 - final TextEditingController _EmailController = TextEditingController();
 - final TextEditingController _PasswordController = TextEditingController();
 + TEC is a class that manages the input data you're doing!
 + Controller lets you grab values from input to button!
 
-> add "controller: CONTROLLER_NAME " property in TextField()
+> add "controller: CONTROLLER_NAME " property in TextField() - Widget
 
 > Add Method() in onPressed:
 > Define these variables inside method:
 - final String userName = _UsernameController.text;
 - final String Email = _EmailController.text;
 - final String password = _PasswordController.text;
-
-ex:
-
+- ex:
 void Register(){
 final String userName = _UsernameController.text;
 final String Email = _EmailController.text;
 final String password = _PasswordController.text;
-
-
 }
 
-> Go to https://firebase.flutter.dev/docs/auth/usage/
-> Follow instructions, and start from Email/Password registration and sign in title!
+> Convert Method() to 'Future Method async()'
 
-1:25:00
+> To Create NEW User with Email and Password? Add these Lines:
+- Try{
+
+    await auth.createUserWithEmailAndPassword(email: email, password: password);
+
+}catch(e){
+    ANY ERROR;
+}
+
+// FireStore - Writing Data [i.e creating collection-documents-collection] by Widget!
+
+// Link 
+- https://firebase.flutter.dev/docs/firestore/usage#writing-data
+
+1:28:00
+
 
 
 // FireStore initialization
