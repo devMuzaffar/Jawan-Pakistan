@@ -58,6 +58,10 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 > Go to /android/app/build.gradle
 > defaultConfig -> multiDexEnabled true,
 
+// Sound Null safety - Error Fixing
+- Update Flutter to latest version
+- Update all firebase packages to latest version
+
 // Tip 
 > If your account exceeds 10 apps project limit in firebase, then use another google account. Then Join secondary account with primary account by ownership!
 > Go to Firebase Overview panel > top right Gear Icon > Project settings > users and permissions > add Member > add Secondary Google account as Owner!
