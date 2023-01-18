@@ -71,6 +71,15 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 ## END OF THEORY PART ##
 
 
+// Firebase - Main() app
+
+> Convert Void main() to async
+> Add these lines in void main():
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  
+
+
 // SafeArea() - widget
 - For Showing widget a little bit bottom from status bar or notch!
 - child: 
@@ -86,7 +95,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 - onPressed: (){}
 - child: Text("Raised Button")
 
-// configuring Up Firebase for first time
+// Firebase - Initializating and configuring for first time!
 
 > Go to https://firebase.flutter.dev/docs/overview/
 > Follow instructions on how to install firebase in flutter
@@ -129,9 +138,6 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 // import Library
 - import 'package:firebase_auth/firebase_auth.dart';
 
-> Go to https://firebase.flutter.dev/docs/auth/usage/
-> Follow instructions how to initialize Authentication
-
 - To Grab all Data inputs from Textfield() to RaisedButton()
 
 > Initialize Variables:
@@ -145,7 +151,8 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 
 > add "controller: CONTROLLER_NAME " property in TextField() - Widget
 
-> Add Method() in onPressed:
+> onPressed: - Add Method
+- onpressed: ()=>Method(),
 > Define these variables inside method:
 - final String userName = _UsernameController.text;
 - final String Email = _EmailController.text;
