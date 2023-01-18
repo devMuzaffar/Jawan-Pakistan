@@ -135,9 +135,9 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 // import Library
 - import 'package:firebase_auth/firebase_auth.dart';
 
-- To Grab all Data inputs from Textfield() to RaisedButton()
+? To Grab all Data inputs from Textfield() to RaisedButton()
 
-> Initialize Variables:
+> Initialize this Variable:
 - FirebaseAuth auth = FirebaseAuth.instance;
 
 - final TextEditingController _UsernameController = TextEditingController();
@@ -172,19 +172,45 @@ final String password = _PasswordController.text;
     ANY ERROR;
 }
 
+
+
+
+// Firebase FireStore - initialization
+
+> Go to https://firebase.flutter.dev/docs/firestore/overview/
+> Follow instructions
+
+- flutter pub add cloud_firestore
+- import 'package:cloud_firestore/cloud_firestore.dart';
+
 // FireStore - Writing Data [i.e creating collection-documents-collection] by Widget!
 
 // Link 
 - https://firebase.flutter.dev/docs/firestore/usage#writing-data
 
+// Initialize variable
+- FirebaseFirestore db = FirebaseFirestore.instance;
+
+> Follow Coding from GrabData() async method! - from Try{} block!
+
+// Create New Collection Documents
+- db.collection("users").doc("USER_ID")
+
+> To have Each Users with Unique ID [i.e for ex: there are 100+ izhans in facebook, to uniquely identify them, we identify them as UID ]
+
+- Convert "await auth.createUserWithEmailAndPassword(email: email, password: password);"
+- to "final UserCredential users = await ..."
+
+// This will create Users Collection with each User's Unique ID document as well as Each user has Email and password in fields!
+- await db.collection("Users").doc(users.user!.uid).set({
+    "email": email,
+    "username": username,
+});
+
+
+
+
 1:28:00
-
-
-
-// FireStore initialization
-
-> Go to > https://firebase.flutter.dev/docs/firestore/overview/
-> Follow instructions
 
 
 
