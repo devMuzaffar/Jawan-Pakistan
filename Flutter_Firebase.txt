@@ -174,7 +174,6 @@ final String password = _PasswordController.text;
 
 
 
-
 // Firebase FireStore - initialization
 
 > Go to https://firebase.flutter.dev/docs/firestore/overview/
@@ -207,10 +206,24 @@ final String password = _PasswordController.text;
     "username": username,
 });
 
+// NOTE: Firebase Does not takes Same value each time. you can use any way to show error that user is already registered by snackbar!
 
 
+// Firebase Authentication - Sign In / Log in / verfitication
 
-1:28:00
+// Follow Coding same as Registration, just remove username
+// clear Try{} block
 
+// Add these variables
+- final UserCredential user = await auth.signInWithEmailAndPassword(email: email, password: password);
+- final DocumentSnapshot SS = await db.collection("Users").doc(user.user!.uid).get();
++ DocumentSnapshot - returns the snapshot of the Collection.Document[FIELDS] data
+
+// To Print Snapshot
+- final data = SS;
+- print(data["username"]);
+- print(data["email"]);
+
+1:41:00
 
 
