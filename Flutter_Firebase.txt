@@ -145,6 +145,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 - final TextEditingController _PasswordController = TextEditingController();
 + TEC is a class that manages the input data you're doing!
 + Controller lets you grab values from input to button!
++ To have Default value already add "text: "dasdsadsadas" ",
 
 > add "controller: CONTROLLER_NAME " property in TextField() - Widget
 
@@ -223,6 +224,38 @@ final String password = _PasswordController.text;
 - final data = SS;
 - print(data["username"]);
 - print(data["email"]);
+
+
+// How to Manage Multiple Pages/Routes at same time
+
+> Go to MaterialApp() - from FutureBuilder() - in initialization firebase
+- in MaterialApp(), Add the following lines:
+- routes: {
+    "/login" : (context) => LoginForm(),
+    "/signup" : (context) => RegisterForm(),
+    "/home" : (context) => Home(),
+}
+> To Navigate, use this in any Button!
+- Navigator.of(context).pushNamed("/home");
+
+// To view Realtime changes in a widget [for Ex: Post() in facebook]
+
+// Link
+- https://firebase.flutter.dev/docs/firestore/usage#realtime-changes
+
+// Initialize variable in your Secondary Widget()
+- Stream collection_Stream = FirebaseFirestore.instance.collection("posts").snapshots();
+
+// StreamBuilder() - Widget
+- Similar to FutureBuilder(), but has Realtime changes ability, whenever found changes in data, it updates itself.
+
+// NOTE: Copy the entire code from Link. and Do follow:
+> You have to mension <QuerySnapshot> data in stream, snapshot each explictly
+> Replace ListView() - with any custom widget you've created!
+> Remove Map<String, dynamic> prefix - or else Code will not work
+
+// To get data from one widget to another. Create constructor on 2nd widget!
+
 
 1:41:00
 
