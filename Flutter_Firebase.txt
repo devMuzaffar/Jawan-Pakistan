@@ -256,7 +256,31 @@ final String password = _PasswordController.text;
 
 // To get data from one widget to another. Create constructor on 2nd widget!
 
+// Since StreamBuilder() from Website is more complex, use this simplified version!
 
-1:41:00
+// Intialize Variable
+final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
 
+// StreamBuilder() Area
+        body: StreamBuilder(
+          stream: SS,
+          builder: ((context, AsyncSnapshot snapshot) {
+            if(snapshot.hasError) return Text("No Data!");
+
+            return ListView.builder(
+              itemCount: snapshot.data!.size,
+              itemBuilder: ((context, index) {
+
+                String title = snapshot.data.docs[index]["title"];
+                String description = snapshot.data.docs[index]["description"];
+                String url = snapshot.data.docs[index]["url"];
+                
+                return ListTile(
+                  title: Text(title),
+                  subtitle: Text(description),
+                  leading: CircleAvatar(backgroundImage: NetworkImage(url), radius: 30),
+                );
+}));}),),),);
+
+// NOTE: Use snapshot.data.size; instead of snapshot.data.length;
 
