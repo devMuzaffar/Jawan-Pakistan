@@ -71,14 +71,6 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 ## END OF THEORY PART ##
 
 
-// Firebase - Main() app
-
-> Convert Void main() to async
-> Add these lines in void main():
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  
-
 
 // SafeArea() - widget
 - For Showing widget a little bit bottom from status bar or notch!
@@ -104,10 +96,14 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 > Android Package Name -> android/app/build.gradle -> applicationID
 > google-services.json -> android/app/
 
-// Paste these Widgets
-- WidgetsFlutterBinding.ensureInitialized();                             -> Void main()
-- final Future<FirebaseApp> _initialization = Firebase.initializeApp();  -> Any Widget()
+> Convert Void main() to async, and Paste these Codes:
+- WidgetsFlutterBinding.ensureInitialized();
+- await Firebase.initializeApp();
 
+
+- final Future<FirebaseApp> _initialization = Firebase.initializeApp();  -> Any Widget() [UNCONFIRMED]
+  
+  
 // Wrap MaterialApp() widget with FutureBuilder()
 // future is _initialization variable. we created below.
 - future: FIREBASE_INITIALIZATION,
@@ -127,6 +123,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 }
 
 // firebase Authentication & Registration initialiation!
+// Registering Email & Password by TextField() and ElevatedButton()
 
 // Links
 - https://firebase.flutter.dev/docs/auth/usage/
@@ -157,6 +154,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 - final String userName = _UsernameController.text;
 - final String Email = _EmailController.text;
 - final String password = _PasswordController.text;
++ Password length should be >>>> 5 !
 - ex:
 void Register(){
 final String userName = _UsernameController.text;
@@ -165,7 +163,6 @@ final String password = _PasswordController.text;
 }
 
 > Convert Method() to 'Future Method async()'
-
 > To Create NEW User with Email and Password? Add these Lines:
 - Try{
 
