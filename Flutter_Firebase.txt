@@ -83,9 +83,9 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 - + border: OutlineInputBorder(),
 - + hintText: "Enter Your Password",
 
-// RaisedButton()
+// ElevatedButton()
 - onPressed: (){}
-- child: Text("Raised Button")
+- child: Text("Elevated Button")
 
 // Firebase - Initializating and configuring for first time!
 
@@ -123,7 +123,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 }
 
 // firebase Authentication & Registration initialiation!
-// Registering Email & Password by TextField() and ElevatedButton()
+:- Registering Email & Password by TextField() and ElevatedButton()
 
 // Links
 - https://firebase.flutter.dev/docs/auth/usage/
@@ -135,7 +135,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 // import Library
 - import 'package:firebase_auth/firebase_auth.dart';
 
-? To Grab all Data inputs from Textfield() to RaisedButton()
+? To Grab all Data inputs from Textfield() to ElevatedButton()
 
 > Initialize this Variable:
 - FirebaseAuth auth = FirebaseAuth.instance;
@@ -145,7 +145,7 @@ Ex: In Uploading videos, if sync is used then other works will freeze until it u
 - final TextEditingController _PasswordController = TextEditingController();
 + TEC is a class that manages the input data you're doing!
 + Controller lets you grab values from input to button!
-+ To have Default value already add "text: "dasdsadsadas" ",
++ To have Default value already add "text: "dasdsadsadas" " property,
 
 > add "controller: CONTROLLER_NAME " property in TextField() - Widget
 
@@ -171,6 +171,9 @@ final String password = _PasswordController.text;
 
 }catch(e){
     ANY ERROR;
+    
+    // To check exact reason of error! i.e if password of email incorrect?
+    print(e.message);
 }
 
 
@@ -226,10 +229,9 @@ final String password = _PasswordController.text;
 - print(data["email"]);
 
 
-// How to Manage Multiple Pages/Routes at same time
+// Routing Multiple Screens Easier ?
 
-> Go to MaterialApp() - from FutureBuilder() - in initialization firebase
-- in MaterialApp(), Add the following lines:
+> Add the following lines in MaterialApp():
 - routes: {
     "/login" : (context) => LoginForm(),
     "/signup" : (context) => RegisterForm(),
@@ -250,13 +252,13 @@ final String password = _PasswordController.text;
 - Similar to FutureBuilder(), but has Realtime changes ability, whenever found changes in data, it updates itself.
 
 // NOTE: Copy the entire code from Link. and Do follow:
-> You have to mension <QuerySnapshot> data in stream, snapshot each explictly
+> You have to mention <QuerySnapshot> data in stream, snapshot each explictly
 > Replace ListView() - with any custom widget you've created!
 > Remove Map<String, dynamic> prefix - or else Code will not work
 
 // To get data from one widget to another. Create constructor on 2nd widget!
 
-// Since StreamBuilder() from Website is more complex, use this simplified version!
+++ Since StreamBuilder() from Website is more complex, use this simplified version!
 
 // Intialize Variable
 final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
@@ -283,4 +285,59 @@ final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
 }));}),),),);
 
 // NOTE: Use snapshot.data.size; instead of snapshot.data.length;
+
+// If you Don't use SteamBuilder() then, for ex: in whatsapp chat.. you have to close/reopen app everytime whenever recieves any msg from others!
+
+### Firebase Storage & Auth ###
+
+
+// To Display any Dialog on Error?
+- In Exception block catch(e):
+{
+    showDialog(
+        context: context,
+        builder: (BuildContext context){
+            return AlertDialog(
+                child: Text(e.message),
+            )
+        }
+        );
+}
+
+- AlertDialog() widget is used in a showDialog() builder Method!
+
+// Expanded() - widget
+- Stretches all widgets in a Available space
+- useful for putting multiple widgets in a smaller room space
+
+// Firebase Storage from Website - Uploading and Url of image?
+- Upload Image
+- click on Image
+- go to bottom of "File Location" > "Access Token" click text
+- it will give you url of your uploaded image
+
+
+
+/// To Upload Image from Phone's Gallery? & Store it on Firebase Storage?
+
+// firebase cloud Storage - Initializing
+- flutter pub add firebase_storage
+- flutter pub get
+
+
+
+// image_picker Package for Uploads
+- flutter pub add image_picker
+- flutter pub get
+- import image_picker package
+
+// Initializing Image Picker!
+
+> Create Async method() and initialize these variables!
+- final ImagePicker _picker = ImagePicker();
+- final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+
+> Put that Async Method() in ElevatedButton() - widget
+
+
 
