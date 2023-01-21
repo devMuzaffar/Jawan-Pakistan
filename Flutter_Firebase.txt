@@ -169,7 +169,7 @@ final String password = _PasswordController.text;
 
     await auth.createUserWithEmailAndPassword(email: email, password: password);
 
-}catch(e){
+} on FirebaseAuthException catch(e){
     ANY ERROR;
     
     // To check exact reason of error! i.e if password of email incorrect?
