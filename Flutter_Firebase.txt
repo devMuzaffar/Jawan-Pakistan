@@ -231,7 +231,7 @@ final String password = _PasswordController.text;
 
 // Routing Multiple Screens Easier ?
 
-// [IMPORTANT] - To make showDialog() to work. we need this, because it adds Context!
+// [IMPORTANT] - To make showDialog() to work. You need to place Async Method to bottom of @override build Widget()!
 
 > Add the following lines in MaterialApp():
 - routes: {
