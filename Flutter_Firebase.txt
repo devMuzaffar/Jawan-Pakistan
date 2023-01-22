@@ -231,6 +231,8 @@ final String password = _PasswordController.text;
 
 // Routing Multiple Screens Easier ?
 
+// [IMPORTANT] - To make showDialog() to work. we need this, because it adds Context!
+
 > Add the following lines in MaterialApp():
 - routes: {
     "/login" : (context) => LoginForm(),
