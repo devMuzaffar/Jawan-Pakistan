@@ -322,13 +322,23 @@ final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
 
 /// To Upload Image from Phone's Gallery? & Store it on Firebase Storage?
 
-// firebase cloud Storage - Initializing
+// Link
+https://firebase.flutter.dev/docs/storage/start
+
+// firebase cloud Storage - Importing Package
 - flutter pub add firebase_storage
 - flutter pub get
+- import Firebase Storage
+
+// Cloud Storage initialializing variables
+- final FirebaseStorage storage = FirebaseStorage.instance;
+- Reference ref = FirebaseStorage.instance.ref("/image.jpeg");
+
+17:06
 
 
-
-// image_picker Package for Uploads
+// image_picker Package
+- It lets you Pick images and videos from phone gallery or from camera!
 - flutter pub add image_picker
 - flutter pub get
 - import image_picker package
@@ -339,7 +349,11 @@ final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
 - final ImagePicker _picker = ImagePicker();
 - final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
 
-> Put that Async Method() in ElevatedButton() - widget
+> To check path of Image?
+- print(image.path);
+
+> Put that on Async Method() in another ElevatedButton() - widget
+
 
 
 
