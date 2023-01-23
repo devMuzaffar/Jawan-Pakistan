@@ -332,9 +332,6 @@ https://firebase.flutter.dev/docs/storage/start
 
 // Cloud Storage initialializing variables
 - final FirebaseStorage storage = FirebaseStorage.instance;
-- Reference ref = FirebaseStorage.instance.ref("/image.jpeg");
-
-17:06
 
 
 // image_picker Package
@@ -345,15 +342,25 @@ https://firebase.flutter.dev/docs/storage/start
 
 // Initializing Image Picker!
 
-> Create Async method() and initialize these variables!
+> Create method() Async and initialize these variables!
 - final ImagePicker _picker = ImagePicker();
 - final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
 
 > To check path of Image?
 - print(image.path);
 
+- Create Empty String Global named image_path;
+- Create setState({
+    image_path = image.path;
+});
++ This saves the image path in variable needed for upload!
+
 > Put that on Async Method() in another ElevatedButton() - widget
 
+> NOW Convert Stateless Widget to Stateful Widget.
++ To save data in any widget, we use Stateful Widget since stateless don't save states of widget
++ In Simple, to save Variable we use setState() which is exist in stateful. Useful for saving Image path!
 
-
-
+// Uploading Image File through Firebase Storage
+- Reference ref = FirebaseStorage.instance.ref("/image.jpeg");
+- 
