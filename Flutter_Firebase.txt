@@ -363,4 +363,10 @@ https://firebase.flutter.dev/docs/storage/start
 
 // Uploading Image File through Firebase Storage
 - Reference ref = FirebaseStorage.instance.ref("/image.jpeg");
-- 
+- import 'dart:io' package
+- create this object and put file:
+    'File ff = File(image_path);'
+- await ref.putFile(ff);
+
+20:00
+
