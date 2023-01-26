@@ -290,6 +290,7 @@ final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
 
 // If you Don't use SteamBuilder() then, for ex: in whatsapp chat.. you have to close/reopen app everytime whenever recieves any msg from others!
 
+
 ### Firebase Storage & Auth ###
 
 
@@ -319,7 +320,6 @@ final Stream SS = FirebaseFirestore.instance.collection("posts").snapshots();
 - it will give you url of your uploaded image
 
 
-
 /// To Upload Image from Phone's Gallery? & Store it on Firebase Storage?
 
 // Link
@@ -333,7 +333,6 @@ https://firebase.flutter.dev/docs/storage/start
 // Cloud Storage initialializing variables
 - final FirebaseStorage storage = FirebaseStorage.instance;
 
-
 // image_picker Package
 - It lets you Pick images and videos from phone gallery or from camera!
 - flutter pub add image_picker
@@ -341,6 +340,8 @@ https://firebase.flutter.dev/docs/storage/start
 - import image_picker package
 
 // Initializing Image Picker!
+
+// Image Picker is used to generate the absolute path of your Image, and then File() object to upload the file in putFile() method!
 
 > Create method() Async and initialize these variables!
 - final ImagePicker _picker = ImagePicker();
@@ -355,7 +356,7 @@ https://firebase.flutter.dev/docs/storage/start
 });
 + This saves the image path in variable needed for upload!
 
-> Put that on Async Method() in another ElevatedButton() - widget
+> Create and Put that on Async Method() in another ElevatedButton() - widget
 
 > NOW Convert Stateless Widget to Stateful Widget.
 + To save data in any widget, we use Stateful Widget since stateless don't save states of widget
@@ -363,10 +364,34 @@ https://firebase.flutter.dev/docs/storage/start
 
 // Uploading Image File through Firebase Storage
 - Reference ref = FirebaseStorage.instance.ref("/image.jpeg");
++ Reference is your location folder in Cloud which you want to upload or download!
+
+// To prevent images overriden by images.jpeg - same name!
+// Use this coding!
+- Replace reference from .("image.jpeg"); with ("image_path.toString().split("/")[6]"); 
+
+
 - import 'dart:io' package
-- create this object and put file:
+- create this File() object and put image path:
     'File ff = File(image_path);'
 - await ref.putFile(ff);
+- Wrap Async Method() with try{} & catch{}
+- Copy Coding from previous authentication like TextEditingController and String method() for uploading Post with title,desc, and image!
 
-20:00
+// To Grab Url of Uploaded image?
+- String url = await ref.getDownloadURL();
 
+// To Create collection of Post with fields and Update them on screen?
+
+- Create Firebase FireStore database instance as db
+- db.collection("posts").add({
+    "title" : title,
+    "description" : description,
+    "url" : url,
+});
+
+// Remove doc().set() and replace with .add() - to let Firebase generate Document ID for specific user!
+// NOTE: can't use User ID in doc() because if User is posting multiple times, then its ID will not be the same!
+// set() method is used along with Doc() is used when we know the Document ID!
+
+38:15
