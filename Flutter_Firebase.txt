@@ -367,9 +367,15 @@ https://firebase.flutter.dev/docs/storage/start
 + Reference is your location folder in Cloud which you want to upload or download!
 
 // To prevent images overriden by images.jpeg - same name!
-// Use this coding!
+
+> METHOD 1 [By String Split]:
 - Replace reference from .("image.jpeg"); with ("image_path.toString().split("/")[6]"); 
 
+> METHOD 2 [By Using Path Library]:
+- import 'package:path/path.dart' as path;
+- String image_name = path.basename(image!.path);
+- replace ref("/images.jpeg"); with ref("/$image_name");
+- Put them inside Post Method();
 
 - import 'dart:io' package
 - create this File() object and put image path:
@@ -394,4 +400,20 @@ https://firebase.flutter.dev/docs/storage/start
 // NOTE: can't use User ID in doc() because if User is posting multiple times, then its ID will not be the same!
 // set() method is used along with Doc() is used when we know the Document ID!
 
-38:15
+// To Clear TextField() after submit?
+- TextController.clear();
++ inside Submit Method() try block
+
+// Update & Delete Post?
+
+- Create 2 Buttons with Async Method with Try{} catch(e){} block wrapped!
+- Firebase Firestore Instance 
+- await db.collection("posts").doc().delete();
+
+> To Obtain Document ID ?
+> Go To previous Home() Screen, where variable data is sent to another Screen, and Add these lines:
+- String doc_ID = document.id;
+- data["id"] = doc_ID;
+- Replace .doc() with doc(data!["id"]) !
+
+59:38
