@@ -416,4 +416,6 @@ https://firebase.flutter.dev/docs/storage/start
 - data["id"] = doc_ID;
 - Replace .doc() with doc(data!["id"]) !
 
-59:38
+// TIP: in Column() - widget, you can use mainAxisSize: MainAxisSize.min to let him take space as much as widgets inside!
+
+1:03:02
