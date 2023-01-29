@@ -1,0 +1,16 @@
+// Technologies going to use for backend development
+1. Nodejs
+2. Expressjs
+3. MongoDB
+
+
+// Nodejs
+
+- Javascript based library
+- Backend technology
+- based on Server-side implementation
+- follows MVC framework [Model: database, View: Client-Display, Controller: Logic-connects M+V]
+
+
+
+15:32
