@@ -423,8 +423,8 @@ https://firebase.flutter.dev/docs/storage/start
 
 - Create seperate Widget
 - Same steps as Uploading or creating Post !
-- await db.collection("posts").doc(docID).update({});
+- await db.collection("posts").doc(docID).update({}); - Can also use .set({});
 
-
+> If Titles and Description keeps changing text on Pick Image ? Put TextEditingController on initState on Statefulwidget
 
 1:03:02
