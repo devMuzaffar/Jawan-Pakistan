@@ -1,3 +1,5 @@
+### THEORY ####
+
 // Technologies going to use for backend development
 1. Nodejs
 2. Expressjs
@@ -10,7 +12,38 @@
 - Backend technology
 - based on Server-side implementation
 - follows MVC framework [Model: database, View: Client-Display, Controller: Logic-connects M+V]
+- a Backend platform built on a V8 Engine of Google Chrome
++ V8 Engine based on C++, Does 2 things: helps running browser and helps in JS Application!
+- Open Source platform as well as Cross-platform! works on windows, linux, and mac etc.
+- Uses:
+> Server-side apps
+> Mobile apps
+> web apps
+- Realtime-Application as well!
+
+- High Demand in jobs Market
+- Famous Applications like GoDaddy, Yahoo, Microsoft, PayPal, UBER are using Nodejs in backend
+
+
+- We Have 2 types of Application:
+1. Client-Side [Frontend App]  [User-interaction]  [HTML CSS, Flutter, React Native]
+2. Server-side [Backend App]   [Bridge/Medium/Agent/Connects between Client-side and Database]
+
+
+- We have 2 types of Database:
+1. Local Database [on HDD, on Laptop] [Client-Side]
+2. Remote Database
+
+- Some Databases have free storage like MongoDB(512MB) and firebase (1GB), if exceeds then charge you
+
+CLIENT Request-> SERVER Request-> DATABASE
+CLIENT <-Responce SERVER <-Responce DATABASE
 
 
 
-15:32
+### END OF THEORY ###
+
+37:02
+
+
+
