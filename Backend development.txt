@@ -84,10 +84,15 @@ JSON - Object that has key:pair relation
 8. To check if its working. Write 'console.log("Hello");'.
 
 
+// Node JS Run / Execute?
+- node index.js
+
 // Node JS version?
 - node --versionc
 
 // Node js CMD commands
 - npm init
-- 
+- node --version
+- node index.js
 
+1:15:55
