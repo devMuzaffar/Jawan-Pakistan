@@ -15,11 +15,16 @@
 - a Backend platform built on a V8 Engine of Google Chrome
 + V8 Engine based on C++, Does 2 things: helps running browser and helps in JS Application!
 - Open Source platform as well as Cross-platform! works on windows, linux, and mac etc.
-- Uses:
+
+- NodeJS Uses:
 > Server-side apps
 > Mobile apps
 > web apps
-- Realtime-Application as well!
+- Realtime-Application as well! DIRT (Data intensive real-time)
+> JSON Api Based Apps
+> Single Page Application
+
+- Node JS = Runtime Environment + JS Library
 
 - High Demand in jobs Market
 - Famous Applications like GoDaddy, Yahoo, Microsoft, PayPal, UBER are using Nodejs in backend
@@ -40,10 +45,49 @@ CLIENT Request-> SERVER Request-> DATABASE
 CLIENT <-Responce SERVER <-Responce DATABASE
 
 
+API: interface that creates connection between computer(front-end) and computer programs(database, other programs)
+- Offering services to other pieces of softwares
+- Types of APIs are: Open API, internal, Partner, composite and RestFul API
+
+> Mostly in NodeJS Apis are used are RESTApi
+> RESTApi: API that retrieves, send and store data in JSON  or Object format
+
+> API Methods:
+- POST() method Stores and retrieves data to DB
+- GET() method retrieves data from DB
+- PUT() method Updates data in DB
+- DELETE() method removes data in DB
+
+RESTAPI - Responces:
+
+- 200 - Request Completed successfully
+- 201 - Created Successfully
+- 400 - Invalid Request. Not existed or wrong format.
+- 401 - Access Denied
+
+JSON - Object that has key:pair relation
+
 
 ### END OF THEORY ###
 
-37:02
+// NODE JS - Installation
+1. Download & install Node JS from google
+2. Create empty folder & open CMD from that folder
+3. npm init
++ npm - node package manager
++ init - creates new project or package
+4. give any class name, and press enter enter!
++ if not give any name, then it will create with default values
+5. This will create 'package.json' file
+6. Open all files in folder in VS Code through 'Code .' command
+7. create 'index.js' file
+8. To check if its working. Write 'console.log("Hello");'.
 
 
+// Node JS version?
+- node --versionc
+
+// Node js CMD commands
+- npm init
+- 
 
