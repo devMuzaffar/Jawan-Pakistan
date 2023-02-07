@@ -68,6 +68,23 @@ RESTAPI - Responces:
 JSON - Object that has key:pair relation
 
 
+Function is called X();
+Method is called Y.X(); - function starts with dot called method!
+
+- Nodejs 3rd Part Libraries:
+1. express - helps in creating and running server
+2. nodemon - to get Data changes in realtime
+
+'facebook.com' - is Path
+'/' - afterwards is called pages
+
+PostMan - useful for API testing
+
+NPM - is Node Package Manager
+ - Basically it just opens package.json
+ - for adding libraries
+ - for executing commands specific
+
 ### END OF THEORY ###
 
 // NODE JS - Installation
@@ -94,5 +111,65 @@ JSON - Object that has key:pair relation
 - npm init
 - node --version
 - node index.js
+
+// 3rd Party Libraries - introduced in Nodejs to make things easier!
+
+// Express Library - Installation
+- ROOT Folder of your Project
+- npm install express
+
+> After installing libraries, there is 'node_modules' folder created, it contains libraries
+> To check if library is installed or not ? Check packages.json, there is dependencies line on it!
+
+// To Use or import Library in NodeJS .js ?
+- const express = require('express');
+- const app = express();
+
++ const is name of variable
++ require() - import from what?
++ express() function is stored in variable app
+
+
+> Whenever you run your application, you run your App on hosted URL!
+> Or run your Application in Specific Port!
+
+> To run app locally, you define local port!
+- const port = 5000;
+
+// Create API locally
+app.get('/', (request, responce) => {
+  console.log('Hello world to first API');
+
+}
+)
+
++ User will call this API, this '/' path will be called, on behalf will run this function (req, res) => {}
++ request is the data sent by front-end user
++ responce is the data sent by back-end 
+
+> To get Responce of Text Back-end API, when Opening Front-end ? // To get responce after requesting ?
+- responce.send("Hello to my API!!");
+
+
+// to Run Server ?
+- app.listen(Port, () => {
+  console.log("Server is Running! ");
+})
++ Check output from node index.js
+
+
+// to Run API or show front-end ?
+- localhost:5000/
+- check output from Terminal!
+
+// nodemon library - installation
+- npm i nodemon
+- open package.json, add new line in 'scripts'{}
+- "start": "nodemon index.js",
+- to run this 'start' key command!
+- npm start
+
+1:37:20
+
 
 1:15:55
