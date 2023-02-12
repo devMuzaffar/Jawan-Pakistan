@@ -72,8 +72,8 @@ Function is called X();
 Method is called Y.X(); - function starts with dot called method!
 
 - Nodejs 3rd Part Libraries:
-1. express - helps in creating and running server
-2. nodemon - to get Data changes in realtime
+1. express - Main purpose is creating and running server!
+2. nodemon - to get Data changes in realtime - not have to restart server everytime!
 
 'facebook.com' - is Path
 '/' - afterwards is called pages
@@ -85,7 +85,9 @@ NPM - is Node Package Manager
  - for adding libraries
  - for executing commands specific
 
+#
 ### END OF THEORY ###
+#
 
 // NODE JS - Installation
 1. Download & install Node JS from google
@@ -171,5 +173,3 @@ app.get('/', (request, responce) => {
 
 1:37:20
 
-
-1:15:55
