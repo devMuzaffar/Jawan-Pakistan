@@ -67,6 +67,9 @@ BoxDecoration(
 gradient: LinearGradient(colors: [Color.red, Color.green])
 ))
 
++ To use Gradient in AppBar() ?
+- use flexibleSpace: property, with Container() gradient!
+
 
 // Align() - Widget
 > alignment: Alignment.bottomLeft
