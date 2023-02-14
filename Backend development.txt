@@ -58,6 +58,9 @@ API: interface that creates connection between computer(front-end) and computer 
 - PUT() method Updates data in DB
 - DELETE() method removes data in DB
 
+
++ Get() - basically in this API method. you only call API path and run.
+
 RESTAPI - Responces:
 
 - 200 - Request Completed successfully
@@ -78,12 +81,17 @@ Method is called Y.X(); - function starts with dot called method!
 'facebook.com' - is Path
 '/' - afterwards is called pages
 
-PostMan - useful for API testing
-
 NPM - is Node Package Manager
  - Basically it just opens package.json
  - for adding libraries
  - for executing commands specific
+
+POSTMAN uses: 
+- Application or softwre Useful for API testing without using Front-end!
+- you tell your API's complete path, his method, as well as parameters
+
+- You can also store your APIs and can use anywhere by import and export in form of .json file
+- useful for ex: if you want API in office, or want in Home
 
 #
 ### END OF THEORY ###
@@ -171,5 +179,31 @@ app.get('/', (request, responce) => {
 - to run this 'start' key command!
 - npm start
 
-1:37:20
 
+## PART - 2 ##
+
+// Topics:
+1) API Request
+2) POSTMAN
+3) Mongo DB Connection
+4) Mongo DB Schema
+5) Front End
+
+
+// In Mongo DB - data is saved in collection-wise, and its structure is in .json format
+// How to create Schema? (structure, variables saved in DB)
+
+
+// Post API - for Dummy User Request
+- app.post('/signup', (req, res) => {
+ console.log(req, 'signup')
+})
++ '/signup' is the web path. we can have same name, but use different methods like signup for .post and .get
+- To Test API ?
+- Download Postman
+- Skip sign in and go to the App
+- New Tab +
+- Start your server by 'npm start'
+- Paste your link as 'localhost:5000', select GET, and send
+
+26:18
