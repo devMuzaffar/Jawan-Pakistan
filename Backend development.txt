@@ -75,8 +75,11 @@ Function is called X();
 Method is called Y.X(); - function starts with dot called method!
 
 - Nodejs 3rd Part Libraries:
-1. express - Main purpose is creating and running server!
-2. nodemon - to get Data changes in realtime - not have to restart server everytime!
+1. express           - Main purpose is creating and running server!
+2. nodemon           - to get Data changes in realtime - not have to restart server everytime!
+3. Cors body-parser  - to get Data from front-end and accept permissions. Useful in assigning permissions. Body-parser is for structure!
+
++ Body-parser is used for telling the data structure!
 
 'facebook.com' - is Path
 '/' - afterwards is called pages
@@ -154,8 +157,8 @@ app.get('/', (request, responce) => {
 )
 
 + User will call this API, this '/' path will be called, on behalf will run this function (req, res) => {}
-+ request is the data sent by front-end user
-+ responce is the data sent by back-end 
++ request is the data Sent [by front-end user]
++ responce is the data Recieved [By Backend] 
 
 > To get Responce of Text Back-end API, when Opening Front-end ? // To get responce after requesting ?
 - responce.send("Hello to my API!!");
@@ -205,5 +208,49 @@ app.get('/', (request, responce) => {
 - New Tab +
 - Start your server by 'npm start'
 - Paste your link as 'localhost:5000', select GET, and send
+- Now Do it in 'localhost:5000/signup' with POST method
++ If used GET instead of Post then will throw Error not found!
++ Console.log() prints output at cmd line
+
+- Since we are working as JSON based, our database is JSON based. So we need to add things!
+- Go to 'Headers' in postmon
+- Need to tell object that our data is in JSON format so accept it
+- Accept - application/json
+
++ TO SEND data from Frontend to Backend ?
+- Go to 'Body' in Postman
++ Since we are going to send data in json form so:
+- Select RAW and set TEXT to JSON
+- For Ex: you want to send Email and password as JSON object?
+
+- {
+ "email" : "asif123@gmail.com",
+ "password" : "12345"
+}
+
++ How to accept JSON data in Backend?
+- npm install cors body-parser
+- Go to index.js
+- const bd = require('body-parser')
+- const cors = require('cors')
+- app.use(cors())
++ Any permissions needed, will allow and assigns them automatically
+- app.use(bd.urlencoded({
+    extended: false
+}))
++ This above for permissions
+- app.use(bd.json)
++ It tells front-end data comes is in JSON form
+
++ To Check front-end data in backend?
+- Go to app.post()
+- Console.log(req.body)
++ Everything in Javascript is based on object!
++ req.body - returns the data from front-end
+
+38:35
+
+
+
 
 26:18
