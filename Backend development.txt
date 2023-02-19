@@ -292,7 +292,16 @@ PostMan additional data in body:
     }
 }
 
+- console.log(req.body.education[0]) - for Array data
+- console.log(req.body.post.postName) - for nested object
++ request. itself is an object!
 
-50:00
+// MongoDB - setup installation
+
+- Go to mongoDB website, sign-up and setup
+- Create new project with any name like nodejs_class
+- 
+
+1:06:00
 
 
