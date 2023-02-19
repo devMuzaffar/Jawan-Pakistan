@@ -239,7 +239,7 @@ app.get('/', (request, responce) => {
     extended: false
 }))
 + This above for permissions
-- app.use(bd.json)
+- app.use(bd.json())
 + It tells front-end data comes is in JSON form
 
 + To Check front-end data in backend?
