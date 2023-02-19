@@ -198,28 +198,39 @@ app.get('/', (request, responce) => {
 
 
 // Post API - for Dummy User Request
+
 - app.post('/signup', (req, res) => {
  console.log(req, 'signup')
 })
+
 + '/signup' is the web path. we can have same name, but use different methods like signup for .post and .get
+
+
 - To Test API ?
+
 - Download Postman
 - Skip sign in and go to the App
 - New Tab +
 - Start your server by 'npm start'
 - Paste your link as 'localhost:5000', select GET, and send
 - Now Do it in 'localhost:5000/signup' with POST method
+
 + If used GET instead of Post then will throw Error not found!
 + Console.log() prints output at cmd line
 
 - Since we are working as JSON based, our database is JSON based. So we need to add things!
-- Go to 'Headers' in postmon
-- Need to tell object that our data is in JSON format so accept it
+
+- Go to 'Headers' in postmon, and add these lines:
 - Accept - application/json
 
-+ TO SEND data from Frontend to Backend ?
++ In Header, we write an object that tells our data is in JSON format so accept it
+
+> TO SEND data from Frontend to Backend ?
+
 - Go to 'Body' in Postman
+
 + Since we are going to send data in json form so:
+
 - Select RAW and set TEXT to JSON
 - For Ex: you want to send Email and password as JSON object?
 
@@ -228,29 +239,60 @@ app.get('/', (request, responce) => {
  "password" : "12345"
 }
 
-+ How to accept JSON data in Backend?
+> How to accept JSON data in Backend?
+
++ cors() - any Request from Front-end, it requires some permission needed by back-end application.
++ cors() - helps in assigning and accepting permissions automatically.
++ body-parser() - for structure, that our data will came in JSON stucture
+
 - npm install cors body-parser
 - Go to index.js
 - const bd = require('body-parser')
 - const cors = require('cors')
 - app.use(cors())
-+ Any permissions needed, will allow and assigns them automatically
+
++ app.use(cors()) - any permissions needed, will automatically assigns and allows them
+
 - app.use(bd.urlencoded({
     extended: false
 }))
-+ This above for permissions
+
++ Used for permissions
++ It tells that any data from front-end comes is in JSON form
+
 - app.use(bd.json())
-+ It tells front-end data comes is in JSON form
 
 + To Check front-end data in backend?
 - Go to app.post()
 - Console.log(req.body)
-+ Everything in Javascript is based on object!
-+ req.body - returns the data from front-end
 
-38:35
++> NOTE: Everything in Javascript is based on object!
+
++ req.body - returns all the data sent by front-end (PostMan) in json format
+
+> To get any specific data?
+- Console.log(req.body.email)
+
+POST() & GET() - difference ?
+- GET() - Get does not send any data, just directly hit API, and gives responce
+- POST() - post for getting data i.e request from front-end, not possible with GET().
+
++ NOTE: when adding integer in Postman Body tab. don't use 0335, instead use 335, as it gives error
+
+PostMan additional data in body: 
+
+{
+    "email" : "asif123@gmail.com",
+    "password" : "123456",
+    "contact" : 335323232,
+    "education": ["matric", "college", "university"],
+    "post": {
+        "postName" : "Post One",
+        "PostDate" : "15-Aug-2019"
+    }
+}
 
 
+50:00
 
 
-26:18
