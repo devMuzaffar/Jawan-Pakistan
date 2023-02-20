@@ -78,6 +78,7 @@ Method is called Y.X(); - function starts with dot called method!
 1. express           - Main purpose is creating and running server!
 2. nodemon           - to get Data changes in realtime - not have to restart server everytime!
 3. Cors body-parser  - to get Data from front-end and accept permissions. Useful in assigning permissions. Body-parser is for structure!
+4. Mongoose          - Mongo DB
 
 + Body-parser is used for telling the data structure!
 
@@ -300,7 +301,30 @@ PostMan additional data in body:
 
 - Go to mongoDB website, sign-up and setup
 - Create new project with any name like nodejs_class
+- create Cluster
+- Go to network access tab, and add the IP access link below
+- Go to database, and click connect
+- create database user
+- connect your application tab
+- copy the connection string code!
+- npm install mongoose
+
+// Connect Mongo DB in Nodejs?
+- const mongoose = require('mongoose')
+- mongoose.connect
 - 
+
+1:12:00
+
+
++ MongoDB is much more secure than Firebase, because if you want to give someone access to your Database, you have 2 options:
++ one is from your PC's IP address, or from email password!
++ More secure is that, only in Office PCs can access database through defined IP, or by email password given by firm to employee
++ Or another way, you can define one IP address that any one can access (though not recommended!).
++ GO TO NETWORK ACCESS, and Add IP address - BY adding IP Access link entry as 0.0.0.0/0
+
+
+
 
 1:06:00
 
