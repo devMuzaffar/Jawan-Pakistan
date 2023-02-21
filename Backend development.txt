@@ -309,14 +309,6 @@ PostMan additional data in body:
 - copy the connection string code!
 - npm install mongoose
 
-// Connect Mongo DB in Nodejs?
-- const mongoose = require('mongoose')
-- mongoose.connect
-- 
-
-1:12:00
-
-
 + MongoDB is much more secure than Firebase, because if you want to give someone access to your Database, you have 2 options:
 + one is from your PC's IP address, or from email password!
 + More secure is that, only in Office PCs can access database through defined IP, or by email password given by firm to employee
@@ -324,8 +316,32 @@ PostMan additional data in body:
 + GO TO NETWORK ACCESS, and Add IP address - BY adding IP Access link entry as 0.0.0.0/0
 
 
+// Connect Mongo DB in Nodejs?
+- const mongoose = require('mongoose')
+
++ Copy Url link, and replace <password> with your password, and paste here:
++ {} - contains some permission compulsory to get access before connect
++ "" - contains specific parameters of database as "connected" "error"
+
+- mongoose.connect(Url_Link, {
+    userCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+
+// To Check if Database is connected or not?
+// On Successful:
+- mongoose.connection.on("connected", () => {
+    console.log("Mongo DB is initialized Successfully")
+})
+
+// On Error
+- mongoose.connection.on("error", () => {
+    console.log("Database Connection Failed!")
+})
 
 
-1:06:00
+
+1:27:00
 
 
