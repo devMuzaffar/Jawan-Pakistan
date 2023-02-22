@@ -329,6 +329,8 @@ PostMan additional data in body:
     useUnifiedTopology: true,
 })
 
+- NOTE: Above all 3 permissions are deprecated in Newer versions. Not needed anymore!
+
 // To Check if Database is connected or not?
 // On Successful:
 - mongoose.connection.on("connected", () => {
@@ -341,7 +343,49 @@ PostMan additional data in body:
 })
 
 
+// Rights of database user:
+1. Read
+2. Write
 
-1:27:00
+// To add Data in database? - By Schema
+- create any new js files as 'signupschema.js' for sign-up, and 'authschema.js' for authentication
+- import mongo DB and create schema like this:
+
+- const mongoose = require('mongoose')
+- const authSchema = mongoose.Schema({
+    email: {type: String},
+    password: {type: String},
+})
+
+> To Connect this schema with our database?
+- const authModel = mongoose.model('authData', authSchema)
+
+{} - is called object in js
+
++ mongoose.model - creates new database collection with name and schema
++ 'authData' - is the name of our node/collection of database
++ authschema - is the schema we created
+
+> authModel variable is created to use in another program, for import.
+- module.exports = authModel
+
++ module.exports - sends data to outside
+
+// To import our js file?
+- let authModel = require('./authSchema')
+
++ let - variable in js, limited to Block!
+
+// How to store data in Model Schema?
+- Create object of your imported file, and place these:
+- 
+    let userCreate = new authModel({
+        email: request.body.email,
+        password: request.body.password,
+    })
+    
+    
+
+1:41:00
 
 
