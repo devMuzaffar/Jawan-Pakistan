@@ -1,0 +1,14 @@
+Who are DevOps?
+
+- Developer + Operation
+- People who develops apps and do operation(like deploying).
+- Operator - Has access to server, tests, and deploy apps
+
+> CI CD
+- CI - continuous integration
+- CD - Continous deployment
+- A lifecycle of planning,building,testing,deploying,monitoring
+- you don't need any middle-man in this cycle, like infinite loop
+
+
+9:48
