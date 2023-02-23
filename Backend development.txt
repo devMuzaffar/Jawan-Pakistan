@@ -383,9 +383,51 @@ PostMan additional data in body:
         email: request.body.email,
         password: request.body.password,
     })
-    
-    
 
-1:41:00
++ This will create copy of data.
+> To save the copy of data?
+- userCreate.save()
+
+> To get responce in Console CMD, if data in databse is stored or not! - we create .then().catch() methoods after save()
+
++ then() - is method, that returns something once data is stored successfully
++ catch(e) - is method, if failed
+
+-   userCreate.save().then((responce) => {
+        console.log(responce, 'responce success')
+
+    }).catch((err) => {
+
+        console.log(err, 'err')
+
+    })
+    
+> To get responce in Web or Postman?
+- we use responce.status().send({})
++ 200 - successfully
++ 400 - Failed
++ result: - is data
++ message: - is message you want to send to web
+
+-   userCreate.save().then((res) => {
+
+        responce.status(200).send({
+            result: res,
+            message: "Data stored successfully"
+        })
+
+    }).catch((err) => {
+
+
+        responce.status(400).send({
+            result: err.message,
+            messsage: "Data Not Stored successfully!"
+        })
+
+    })
+    
+    - NOTE: status Code is not working, so remove them!
+    - replace
+   
 
 
