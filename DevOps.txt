@@ -10,5 +10,33 @@ Who are DevOps?
 - A lifecycle of planning,building,testing,deploying,monitoring
 - you don't need any middle-man in this cycle, like infinite loop
 
+- As DevOps, you work, you create any XYZ feature i.e authentication, Once done, you Git push to branch, It automatically deployed to XYZ server!
+- this deployment possiblity we now have!
+
+// Why Docker Containerization ?
+
+> Example: you've created Application lets say Nodejs App on newer version, but server has Nodejs App Older version. You told Operator to Update his server, but he refused that updating to latest version might break other Applications that server running them on older versions. To Solve this version Problem.
+> we use called Docker Containerization
+
+// What is Docker?
+- Docker is a industry-standard tool/software, which we containerized our applications
+
+> We have Wrapped our Application in Container.
+> Container is an Isolated Mode
+
+- NOTE: Cloud Servers 95% supports Containerization
+
+// What is the advantage?
+- When Project is Containerized, No more dependent on versions. Will run easily as long as both systems have Docker installed!
+
+> You Can also update softwares directly? if you have applications running on Older versions will cause problems after removing old and updating new version.
+> You Can also Start/Stop each Container easily. 
+
+- DockerHub - Similar to github, you can find many images.
+
+- first Container is build, then images
+
+27:40
+
 
 9:48
