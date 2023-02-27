@@ -36,7 +36,28 @@ Who are DevOps?
 
 - first Container is build, then images
 
-27:40
+- To install any image, goto DockerHub, find any image i.e nodejs, mysql.
+- tag: means - latest, or specific version you can specify.
+- MySQL's Pre-defined port number : 3306
+
+- For Example: MySQL versions i want to use 5.7, v8, v7.
+- I can use all these 3 versions in my system via Docker (by creating 3 containers)
+
+// Problem:
+- MySQL port is 3306, and want to use accross 3 versions?
++ We can't run all 3 versions apps in same port!
+- Docker port binding!
+
+// How to use Docker port Bindings?
+- '-p HostPort:ContainerPort'
++ HostPort is your MySQL port
++ ContainerPort is your Docker' Container port
+- Example : 
+> MySql 5.7.3: -p 4000: 3306
+> MySql V8: -p 4001: 3306
+> MySql v7: -p 4002: 3306
+
+42:00
 
 
-9:48
+
