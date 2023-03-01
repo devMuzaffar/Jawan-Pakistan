@@ -93,8 +93,36 @@ https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 // dio Package - similar to http used in restAPI
 - dio is the easier version of Http and provides many more functions!
 - download, install and import dio in flutter
-- 
+- Create folder services/api_service.dart
+- paste these lines:
 
+class ApiService{
+  static Dio? client;
+
+  ApiService(){
+    if(client == null){
+      client = Dio(
+        BaseOptions(
+          baseUrl: "https://localhost:5000"
+        )
+      );
+    }
+    
+    getShoppingList() async{
+       var responce = await client!.get('');
+      return responce.data;
+    }
+    
+  }
+}
+
++ baseUrl : provides one single url. advantage is that you don't have to input url everytime.
+
+- Now goto RestAPI link. and copy whole content and paste into this website: https://javiercbk.github.io/json_to_dart/
+- this website will convert your json to json model easily
+- now copy content and create dart and paste with folder /model/list_item_responce.dart
+
+1:36:00
 
 
 1:29:20
