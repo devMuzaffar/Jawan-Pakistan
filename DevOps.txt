@@ -57,7 +57,48 @@ Who are DevOps?
 > MySql V8: -p 4001: 3306
 > MySql v7: -p 4002: 3306
 
-42:00
+// Node js installation docker
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+- FROM : from tells from where adn which version of image need to build
+
+- After Creating Container, you can easily deploy on any server i.e aws, google cloud etc.
+- Servers are mostly created on Linux, as well as Docker is made on Linux Kernel so they easily work.
+
+
+// DigitalOcean or heroku
+- These websites provide SSH access. means allocate virtual or dedicated servers.
+- what does SSH do? basically ports command-line from server/machine to your PC.
+- What ever you're doing commands on PC. will executes those commands on server!
+
+> When Using github - you do changes in code, you git push, git pull, these commands have to do manually.
+> To automate this process, we use github actions.
+- Go to your Repo, click actions, create new workflow
+- Google SSH github actions
+- You can use any their workflow file which contains several commands on script
+- .github/workflows - important to have this folder or else file will not work.
+
+> Secrets are the hidden strings
+- Go to your Repo and settings
+- Go to secrets and add new Secret, and write anything i.e for username or password
+- Specifying username password manually in script is not secure and not recommended so you need these secrets
+
+
+
+// LIST bininng Flutter
+
+// Note json is on http localHost server by nodejs
+// IOS: does not support http, only https, so google it how to solve
+
+// dio Package - similar to http used in restAPI
+- dio is the easier version of Http and provides many more functions!
+- download, install and import dio in flutter
+- 
+
+
+
+1:29:20
+
 
 
 
