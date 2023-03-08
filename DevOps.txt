@@ -140,11 +140,18 @@ class ApiService{
     return items;
   }
  + This will add json object in list form
+ + WARNING: Rename List<Map<dynamic, String>> json to var json - or else it will throw null value error on futurebuilder!
  
  + our data binning is done!
  
  - Now rewrite this getshoppingList():
- - 
+ -   Future<List<listItemResponce>> getShoppingListData() async{ 
+
+      var responce = await client!.get('');
+      return listItemResponce.fromJsonList(responce.data);
+
+    }
+    
  
 
 1:29:20
