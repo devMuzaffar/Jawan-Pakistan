@@ -122,8 +122,30 @@ class ApiService{
 - this website will convert your json to json model easily
 - now copy content and create dart and paste with folder /model/list_item_responce.dart
 
-1:36:00
+- .fromJson() - construct object from incoming http responce
+- .toJson() - - when sending data to construct object
 
+- Now convert getshoppinglist()
+- Future<listItemResponce> getShoppingList() async{
+      var responce = await client!.get('');
+      return listItemResponce.fromJson(responce.data);
+ }
+ 
+ - Go to your generated class file and add this method:
+ - static List<listItemResponce> fromJsonList(List<Map<String, dynamic>> json){
+    List<listItemResponce> items = [];
+    for (var item in json){
+      items.add(listItemResponce.fromJson(item));
+    }
+    return items;
+  }
+ + This will add json object in list form
+ 
+ + our data binning is done!
+ 
+ - Now rewrite this getshoppingList():
+ - 
+ 
 
 1:29:20
 
